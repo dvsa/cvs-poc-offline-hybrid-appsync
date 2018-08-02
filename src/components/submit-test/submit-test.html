@@ -1,0 +1,25 @@
+<form (ngSubmit)="submitTest()">
+  <div>
+    Submit a test.
+  </div>
+  <ion-item>
+    <ion-label>Test Type:</ion-label>
+    <ion-select name="testType" id="" [(ngModel)]="test.testType">
+      <ion-option value="Full Test">Full Test</ion-option>
+      <ion-option value="Paid Retest">Paid Retest</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Meter Reading</ion-label>
+    <ion-input type="number" name="meterReading" [(ngModel)]="test.meterReading"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Abandoned Test</ion-label>
+    <ion-checkbox name="abandoned" [(ngModel)]="test.isAbandoned"></ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-label>Passed Test</ion-label>
+    <ion-checkbox name="passed" [(ngModel)]="test.isPassed"></ion-checkbox>
+  </ion-item>
+  <button ion-button type="submit" block>Add Test</button>
+</form>

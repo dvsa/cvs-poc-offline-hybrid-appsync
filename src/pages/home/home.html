@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      CVS - Home
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div>HomePage</div>
+
+  <div>
+    <p>
+      <a (click)="viewTests()">View Tests</a>
+    </p>
+  </div>
+  <div>
+    <p>
+      <b>Status:</b> Logged In
+    </p>
+    <p>
+      <a (click)="logout()">Logout</a>
+    </p>
+    <p>
+      <b>Access Token:</b> {{token.accessToken}}
+    </p>
+    <p>
+      <b>Access Token Validity:</b> {{accessTokenInfo.message}}
+    </p>
+    <p>
+      <b>Access Token Json:</b>
+    </p>
+    <pre [innerHtml]="accessTokenInfo.json"></pre>
+    <p>
+      <b>ID Token:</b> {{token.idToken}}
+    </p>
+    <p>
+      <b>ID Token Validity:</b>
+      {{idTokenInfo.message}}
+    </p>
+    <p>
+      <b>ID Token Json:</b>
+    </p>
+    <p>
+      <pre [innerHtml]="idTokenInfo.json"></pre>
+
+  </div>
+
+  <!-- {{#if error}}
+<div>
+  <p>
+    <b>Error Message:</b> {{error.message}}</p>
+  <p>
+    <b>Error Stack:</b> {{error.stack}}</p>
+</div>
+{{/if}} -->
+
+
+</ion-content>

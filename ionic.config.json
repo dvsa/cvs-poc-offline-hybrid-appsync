@@ -1,0 +1,7 @@
+{
+  "name": "pwa-appsync",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
