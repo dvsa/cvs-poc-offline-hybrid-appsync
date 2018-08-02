@@ -5,7 +5,7 @@
 This repository contains a proof of concept to show how AWS-AppSync and graphql can be used to store and syncronise data for an offline first hybrid application.
 
 ### Setup
-To get the projec working locally you'll need to install git secrets as this is used as a prepush check to mitigate the release of secrets into the public. For more information check the Git Secrets Github Repo.
+To get the project working locally you'll need to install git secrets as this is used as a prepush check to mitigate the release of secrets into the public. For more information check the [Git Secrets Github Repo](https://github.com/awslabs/git-secrets).
 
 - git clone repo
 - npm install
