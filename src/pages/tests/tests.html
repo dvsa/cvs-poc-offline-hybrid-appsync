@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      CVS - Tests
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngIf="authorised == false"> You are not authorised to access this page</div>
+
+  <div *ngIf="authorised == true">
+
+    <div>
+      Storage: {{storage.usage}} used of {{storage.quota}}
+    </div>
+    <hr>
+    <div *ngFor="let vehicle of vehicles">
+      <div>
+        <span class="title">Registration:</span> {{ vehicle.registration }}</div>
+      <div>
+        <span class="title">Type:</span> {{ vehicle.type }}</div>
+      <div>
+        <span class="title">Make:</span> {{ vehicle.make }}</div>
+      <div>
+        <span class="title">Model:</span> {{ vehicle.model }}</div>
+      <div class="history" *ngIf="vehicle.tests.length > 0">
+        <span class="title">Test History</span>
+        <span>
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Abandoned</th>
+                <th>Passed</th>
+                <th>Meter reading</th>
+                <th>Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let test of vehicle.tests">
+                <td>{{ test.date }}</td>
+                <td>{{ test.isAbandoned }}</td>
+                <td>{{ test.isPassed }}</td>
+                <td>{{ test.meterReading }}</td>
+                <td>{{ test.testType }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </span>
+      </div>
+      <button ion-button (click)="showTestForm(vehicle.registration)">Create Test</button>
+    </div>
+  </div>
+</ion-content>
