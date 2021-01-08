@@ -1,3 +1,4 @@
+**This repository is no longer maintained**
 # CVS Spike
 
 ## AWS AppSync Offline
